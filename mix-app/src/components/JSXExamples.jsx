@@ -59,34 +59,34 @@ function JSXExamples(){
                         Inline styles ใช้ object
                     </p>
                 </div>
-                </section>
-                <section>
-                    <h2>🔀 Conditional Rendering</h2>
+            </section>
+            <section>
+                <h2>🔀 Conditional Rendering</h2>
 
 
-                    <p>
-                        สถานะ: {isLoggedIn ? ' ล็อกอินแล้ว' : ' ยังไม่ได้ล็อกอิน'}
-                    </p>
+                <p>
+                   สถานะ: {isLoggedIn ? ' ล็อกอินแล้ว' : ' ยังไม่ได้ล็อกอิน'}
+                </p>
 
 
-                    {hasNotification > 0 && (
-                        <div className="notification">
-                            คุณมี {hasNotification} การแจ้งเตือนใหม่
-                        </div>
-                    )}
+                {hasNotification > 0 && (
+                    <div className="notification">
+                        คุณมี {hasNotification} การแจ้งเตือนใหม่
+                    </div>
+                )}
 
 
-                    {(() => {
-                        if (user.age >= 18) {
-                            return <p> {formatName(user)} เป็นผู้ใหญ่แล้ว</p>;
-                        } else {
-                            return <p> {formatName(user)} ยังเป็นเด็ก</p>;
-                        }
-                    })()}
-                </section>
+                {(() => {
+                    if (user.age >= 18) {
+                        return <p> {formatName(user)} เป็นผู้ใหญ่แล้ว</p>;
+                    } else {
+                        return <p> {formatName(user)} ยังเป็นเด็ก</p>;
+                    }
+                })()}
+            </section>
 
-                <section>
-                    <h2>📋 การแสดงผล Lists</h2>
+            <section>
+                    <h2> การแสดงผล Lists</h2>
                     <h3>งานอดิเรกของ {user.firstName}:</h3>
                     <ul>
                         {user.hobbies.map((hobby, index) => (
@@ -111,9 +111,9 @@ function JSXExamples(){
                             </div>
                         ))}
                     </div>
-                </section>
-                <section>
-                    <h2>🧩 React Fragment</h2>
+            </section>
+            <section>
+                    <h2> React Fragment</h2>
                     <p>ใช้เมื่อไม่ต้องการ wrapper element:</p>
                     {/* Fragment แบบเต็ม */}
                     <React.Fragment>
@@ -126,27 +126,27 @@ function JSXExamples(){
                         <h3>หัวข้ออื่น</h3>
                         <p>เนื้อหาอื่น</p>
                     </>
-                </section>
-                <section>
-                <h2>🎯 Event Handling ใน JSX</h2>
+            </section>
+            <section>
+                <h2> Event Handling ใน JSX</h2>
                 <input 
                     type="text" 
                     placeholder="พิมพ์อะไรก็ได้..."
                     onChange={(e) => console.log('พิมพ์:', e.target.value)}
                 />
                 
-                <select onChange={(e) => alert(`เลือก: ${e.target.value}`)}>
+            <select onChange={(e) => alert(`เลือก: ${e.target.value}`)}>
                     <option value="">-- เลือกภาษา --</option>
                     <option value="js">JavaScript</option>
                     <option value="py">Python</option>
                     <option value="java">Java</option>
                     <option value="go">Go</option>
-                </select>
+            </select>
             </section>
             
-            {/* === 7. Comments ใน JSX === */}
+           
             <section>
-                <h2>💬 Comments ใน JSX</h2>
+                <h2> Comments ใน JSX</h2>
                 {/* นี่คือ comment ใน JSX */}
                 <p>Comment ใน JSX ต้องอยู่ใน {/* curly braces */}</p>
                 {
